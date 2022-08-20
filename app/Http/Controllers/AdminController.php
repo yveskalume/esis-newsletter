@@ -16,7 +16,7 @@ class AdminController extends Controller
     {
         $students = Student::all();
         $promotions = Promotion::all();
-        $messages = Message::all();
+        $messages = Message::orderBy("created_at","DESC")->cursorPaginate(10);
         return view("admin.dashboard",[
             "students" => $students,
             "promotions" => $promotions,

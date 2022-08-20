@@ -14,4 +14,8 @@ class Message extends Model
       'subject',
       'content'
     ];
+
+    public function promotion() {
+        return $this->belongsTo(Promotion::class);
+    }
 }

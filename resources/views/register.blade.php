@@ -19,8 +19,8 @@
                 <div class="nk-split nk-split-page nk-split-md">
                     <div class="nk-split-content nk-block-area nk-block-area-column nk-auth-container bg-white">
                         <div class="nk-block nk-block-middle nk-auth-body">
-                            <div class="brand-logo pb-5"><a href="../../index.html" class="logo-link">
-                                    <img class="logo-light logo-img logo-img-lg" src="{{ asset("images/logo.png") }}"
+                            <div class="brand-logo pb-5"><a href="{{ url("/") }}" class="logo-link">
+                                    <img class="logo-img-lg" src="{{ asset("images/logo.png") }}"
                                          alt="logo"></a>
                             </div>
                             <div class="nk-block-head">
@@ -69,10 +69,10 @@
 
                         </div>
                         <div class="nk-block nk-auth-footer">
-                            <div class="mt-3"><p>&copy; 2022 Esisalama</p></div>
+                            <div class="mt-3"><p>&copy; {{ now()->year }} ESISALAMA</p></div>
                         </div>
                     </div>
-                    <div class="nk-split-content nk-split-stretch bg-abstract"></div>
+                    <div style="background-image: url('{{ asset("images/student.jpeg") }}'); background-size: cover; background-position: top;" class="nk-split-content nk-split-stretch bg-abstract hide-mb-sm"></div>
                 </div>
             </div>
         </div>
